@@ -1,4 +1,4 @@
-THIS SHOULD BE A LINTER ERRORimport 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'common.dart';
 
 class StudentHome extends StatelessWidget {

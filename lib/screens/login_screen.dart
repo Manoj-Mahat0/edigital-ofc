@@ -359,14 +359,15 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-                    LayoutBuilder(
-                      builder: (context, constraints) {
-                        if (constraints.maxWidth < 800) {
-                          return const SizedBox.shrink();
-                        }
-                        return Expanded(
-                          flex: 5,
-                          child: Container(
+                    Expanded(
+                      flex: 5,
+                      child: LayoutBuilder(
+                        builder: (context, constraints) {
+                          final totalWidth = MediaQuery.of(context).size.width;
+                          if (totalWidth < 800) {
+                            return const SizedBox.shrink();
+                          }
+                          return Container(
                             padding: const EdgeInsets.all(18),
                             decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [Colors.grey.shade900, Colors.black87]),
@@ -391,9 +392,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                 );
                               }).toList(),
                             ),
-                          ),
-                        );
-                      },
+                          );
+                        },
+                      ),
                     ),
                   ],
                 ),
