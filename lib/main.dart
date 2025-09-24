@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'screens/splash_screen.dart';
+import 'screens/login_screen.dart';
+import 'screens/signup_screen.dart';
+import 'screens/roles/role_homes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +34,20 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const SplashScreen(),
+        '/login': (context) => const LoginScreen(),
+        '/signup': (context) => const SignupScreen(),
+        '/admin': (context) => const AdminHome(),
+        '/developer': (context) => const DeveloperHome(),
+        '/tester': (context) => const TesterHome(),
+        '/staff': (context) => const StaffHome(),
+        '/seo': (context) => const SEOHome(),
+        '/accountant': (context) => const AccountantHome(),
+        '/student': (context) => const StudentHome(),
+      },
     );
   }
 }
