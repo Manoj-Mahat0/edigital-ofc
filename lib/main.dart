@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 import 'screens/splash_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/signup_screen.dart';
-import 'screens/roles/role_homes.dart';
+import 'screens/roles/admin_home.dart';
+import 'screens/roles/developer_home.dart';
+import 'screens/roles/tester_home.dart';
+import 'screens/roles/staff_home.dart';
+import 'screens/roles/seo_home.dart';
+import 'screens/roles/accountant_home.dart';
+import 'screens/roles/student_home.dart';
 
 void main() {
   runApp(const MyApp());
